@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Birthday Surprise 🎂</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      color: #ff4081;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      width: 250px;
+    }
+
+    button:hover {
+      background-color: #e91e63;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Question 1 -->
+  <div id="page1" class="page active">
+    <h1>Question 1 😄</h1>
+
+    <p>Who is the most amazing person?</p>
+
+    <button onclick="nextPage(2)">Me 😎</button>
+    <button onclick="nextPage(2)">Definitely Me ✨</button>
+    <button onclick="nextPage(2)">Obviously Me 😂</button>
+  </div>
+
+  <!-- Question 2 -->
+  <div id="page2" class="page">
+    <h1>Question 2 🎁</h1>
+
+    <p>What do you deserve today?</p>
+
+    <button onclick="nextPage(3)">Cake 🎂</button>
+    <button onclick="nextPage(3)">Gifts 🎁</button>
+    <button onclick="nextPage(3)">Everything 💖</button>
+  </div>
+
+  <!-- Question 3 -->
+  <div id="page3" class="page">
+    <h1>Final Question ✨</h1>
+
+    <p>Ready for your birthday surprise?</p>
+
+    <button onclick="nextPage(4)">YESSSS 😍</button>
+    <button onclick="nextPage(4)">Absolutely 🎉</button>
+    <button onclick="nextPage(4)">Show Me 👀</button>
+  </div>
+
+  <!-- Birthday Message -->
+  <div id="page4" class="page">
+    <h1>Happy Birthday 🎉</h1>
+
+    <p>Dear [Friend's Name],</p>
+
+    <p>
+      You are amazing and I’m so lucky to have you!
+    </p>
+
+    <p>
+      May your life always be filled with happiness,
+      laughter, success, and endless smiles 💖
+    </p>
+
+    <p>
+      Enjoy your special day 🎂✨
+    </p>
+  </div>
+
+  <script>
+    function nextPage(pageNumber) {
+
+      let pages = document.getElementsByClassName("page");
+
+      for (let i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+      }
+
+      document.getElementById("page" + pageNumber).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
